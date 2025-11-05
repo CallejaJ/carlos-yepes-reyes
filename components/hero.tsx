@@ -1,18 +1,9 @@
 "use client";
 
 import { useLanguage } from "./language-provider";
-import { Button } from "./ui/button";
-import { LanguageSelector } from "./language-selector";
 
 export function Hero() {
   const { t } = useLanguage();
-
-  const scrollToPricing = () => {
-    const pricingSection = document.getElementById("pricing");
-    if (pricingSection) {
-      pricingSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
@@ -26,17 +17,10 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-blue-900/50 via-blue-800/40 to-blue-950/70" />
       </div>
 
-      {/* Language Selector */}
-      <div className="absolute top-6 right-6 z-20">
-        <LanguageSelector />
-      </div>
-
       {/* Content */}
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
         {/* Giant Banana Logo */}
-        <div className="mb-8 animate-bounce-slow drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]">
-          {/* <div className="text-[12rem] leading-none md:text-[16rem]">🍌</div> */}
-        </div>
+        <div className="mb-8 animate-bounce-slow drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"></div>
 
         <h1 className="mb-6 text-balance font-bold text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] text-5xl md:text-7xl lg:text-8xl">
           {t.hero.title}
@@ -45,14 +29,6 @@ export function Hero() {
         <p className="mb-10 max-w-2xl text-balance text-xl text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)] md:text-2xl">
           {t.hero.subtitle}
         </p>
-
-        <Button
-          size="lg"
-          onClick={scrollToPricing}
-          className="bg-secondary hover:bg-secondary/90 text-secondary-foreground text-lg px-8 py-6 font-bold shadow-[0_8px_24px_rgba(0,0,0,0.3)] transform transition hover:scale-105 hover:shadow-[0_12px_32px_rgba(0,0,0,0.4)]"
-        >
-          {t.hero.cta}
-        </Button>
       </div>
 
       {/* Scroll Indicator */}

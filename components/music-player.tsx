@@ -1,44 +1,50 @@
-"use client"
+"use client";
 
-import { useState, useRef, useEffect } from "react"
-import { Button } from "./ui/button"
-import { Volume2, VolumeX, Music } from "lucide-react"
+import { useState, useRef, useEffect } from "react";
+import { Button } from "./ui/button";
+import { Volume2, VolumeX, Music } from "lucide-react";
 
 export function MusicPlayer() {
-  const [isPlaying, setIsPlaying] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
-  const audioRef = useRef<HTMLAudioElement>(null)
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
     if (audioRef.current) {
-      audioRef.current.volume = 0.3
+      audioRef.current.volume = 0.3;
     }
-  }, [])
+  }, []);
 
   const togglePlay = async () => {
     if (audioRef.current) {
       if (isPlaying) {
-        audioRef.current.pause()
-        setIsPlaying(false)
+        audioRef.current.pause();
+        setIsPlaying(false);
       } else {
-        setIsLoading(true)
+        setIsLoading(true);
         try {
-          await audioRef.current.play()
-          setIsPlaying(true)
+          // Cargar el audio si no está cargado
+          if (audioRef.current.readyState < 2) {
+            audioRef.current.load();
+          }
+          await audioRef.current.play();
+          setIsPlaying(true);
         } catch (error) {
-          console.error("Error playing music:", error)
+          console.error("Error playing music:", error);
+          alert(
+            "No se pudo reproducir la música. Verifica que el archivo existe en /public/sounds/salsa-mix-fiesta.mp3"
+          );
         } finally {
-          setIsLoading(false)
+          setIsLoading(false);
         }
       }
     }
-  }
+  };
 
   return (
     <>
-      <audio ref={audioRef} loop preload="none">
-        <source src="/salsa-music.mp3" type="audio/mpeg" />
-        <source src="/bachata-music.mp3" type="audio/mpeg" />
+      <audio ref={audioRef} loop preload="metadata">
+        <source src="/sounds/salsa-mix-fiesta.mp3" type="audio/mpeg" />
       </audio>
 
       <Button
@@ -56,5 +62,5 @@ export function MusicPlayer() {
         )}
       </Button>
     </>
-  )
+  );
 }
