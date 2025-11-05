@@ -9,7 +9,7 @@ export function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground py-12 px-4">
       <div className="container mx-auto">
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-3 md:items-start">
           {/* Logo */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <div className="mb-3 flex items-center gap-2">
@@ -24,7 +24,7 @@ export function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div className="text-center md:text-left">
+          <div className="text-center md:text-left md:pt-[52px]">
             <h4 className="mb-4 text-lg md:text-xl font-semibold">
               {t.footer.contact}
             </h4>
@@ -47,7 +47,7 @@ export function Footer() {
           </div>
 
           {/* Social Links */}
-          <div className="text-center md:text-left">
+          <div className="text-center md:text-left md:pt-[52px]">
             <h4 className="mb-4 text-lg md:text-xl font-semibold">
               Social Media
             </h4>
