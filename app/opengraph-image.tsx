@@ -1,7 +1,8 @@
 import { ImageResponse } from "next/og";
 
 // Configuración de la imagen
-export const alt = "Bachata al Aire Libre - Clases de Salsa y Bachata en Barcelona";
+export const alt =
+  "Bachata al Aire Libre - Clases de Salsa y Bachata en Málaga";
 export const size = {
   width: 1200,
   height: 630,
@@ -73,7 +74,7 @@ export default async function Image() {
               textShadow: "0 2px 8px rgba(0,0,0,0.4)",
             }}
           >
-            Clases de Salsa y Bachata en Barcelona
+            Clases de Salsa y Bachata en Málaga
           </p>
 
           <div
@@ -154,7 +155,7 @@ export default async function Image() {
               fontWeight: "500",
             }}
           >
-            🎵 Carlos Yépez • Barcelona
+            🎵 Carlos Yépez • Málaga
           </p>
         </div>
 

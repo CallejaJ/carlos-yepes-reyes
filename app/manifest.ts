@@ -3,9 +3,9 @@ import type { MetadataRoute } from "next";
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Bachata al Aire Libre - Carlos Yépez",
-    short_name: "Bachata Barcelona",
+    short_name: "Bachata Málaga",
     description:
-      "Clases de salsa y bachata al aire libre en Barcelona con Carlos Yépez. Aprende a bailar en un ambiente divertido y relajado.",
+      "Clases de salsa y bachata al aire libre en Málaga con Carlos Yépez. Aprende a bailar en un ambiente divertido y relajado.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",

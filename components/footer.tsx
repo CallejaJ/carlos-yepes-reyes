@@ -42,7 +42,7 @@ export function Footer() {
               </div>
               <div className="flex items-center justify-center md:justify-start gap-3">
                 <MapPin className="h-5 w-5 flex-shrink-0" />
-                <span className="text-sm md:text-base">Barcelona, Spain</span>
+                <span className="text-sm md:text-base">Málaga, Spain</span>
               </div>
             </div>
           </div>
