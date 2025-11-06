@@ -3,8 +3,8 @@ import { ImageResponse } from "next/og";
 export const runtime = "edge";
 
 export const size = {
-  width: 32,
-  height: 32,
+  width: 180,
+  height: 180,
 };
 
 export const contentType = "image/png";
@@ -21,14 +21,14 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          borderRadius: "20%",
+          borderRadius: "22%",
           position: "relative",
         }}
       >
         {/* Maracas con emoji */}
         <div
           style={{
-            fontSize: 20,
+            fontSize: 120,
             display: "flex",
             transform: "rotate(-15deg)",
           }}
