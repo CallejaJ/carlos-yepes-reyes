@@ -19,7 +19,7 @@ export function Footer() {
               Bachata al Aire Libre
             </h3>
             <p className="text-base md:text-lg opacity-90 italic leading-relaxed max-w-xs">
-              Clases de salsa y bachata con Carlos yépez. Únete a nuestras
+              Clases de salsa y bachata con Carlos Yépez. Únete a nuestras
               clases al aire libre y descubre el ritmo que llevas dentro.
             </p>
           </div>
@@ -104,7 +104,7 @@ export function Footer() {
 
         <div className="mt-8 border-t border-primary-foreground/20 pt-8 text-center">
           <p className="text-xs md:text-sm opacity-80">
-            © 2025 Bachata al Aire Libre - Carlos yépez. {t.footer.rights}
+            © 2025 Bachata al Aire Libre - Carlos Yépez. {t.footer.rights}
           </p>
         </div>
       </div>

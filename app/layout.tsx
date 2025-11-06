@@ -12,11 +12,11 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Bachata al Aire Libre - Clases de Salsa y Bachata | Carlos yépez",
+  title: "Bachata al Aire Libre - Clases de Salsa y Bachata | Carlos Yépez",
   description:
-    "Clases de salsa y bachata al aire libre en Barcelona. Aprende a bailar con Carlos yépez en grupos reducidos (5-20 personas). Ambiente divertido y atención personalizada.",
+    "Clases de salsa y bachata al aire libre en Barcelona. Aprende a bailar con Carlos Yépez en grupos reducidos (5-20 personas). Ambiente divertido y atención personalizada.",
   keywords:
-    "bachata al aire libre, clases de salsa Barcelona, clases de bachata Barcelona, Carlos yépez, baile latino, salsa, bachata",
+    "bachata al aire libre, clases de salsa Barcelona, clases de bachata Barcelona, Carlos Yépez, baile latino, salsa, bachata",
   generator: "jorgecalleja.dev",
   icons: {
     icon: "/icon.png",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Bachata al Aire Libre - Clases de Salsa y Bachata",
     description:
-      "Aprende salsa y bachata con Carlos yépez en Barcelona. Clases al aire libre en grupos reducidos.",
+      "Aprende salsa y bachata con Carlos Yépez en Barcelona. Clases al aire libre en grupos reducidos.",
     locale: "es_ES",
     type: "website",
   },

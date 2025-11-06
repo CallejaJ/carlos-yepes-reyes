@@ -39,7 +39,7 @@ export function Header() {
         <div className="flex items-center gap-2">
           <Music className="h-6 w-6 md:h-8 md:w-8 text-white drop-shadow-lg" />
           <span className="text-base md:text-xl font-bold text-white drop-shadow-lg">
-            Carlos yépez
+            Carlos Yépez
           </span>
         </div>
 
