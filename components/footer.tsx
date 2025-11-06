@@ -15,11 +15,12 @@ export function Footer() {
             <div className="mb-3 flex items-center gap-2">
               <Music className="h-10 w-10 md:h-12 md:w-12" />
             </div>
-            <h3 className="text-xl md:text-2xl font-bold mb-3">Carlos Yepes</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-3">
+              Bachata al Aire Libre
+            </h3>
             <p className="text-base md:text-lg opacity-90 italic leading-relaxed max-w-xs">
-              ¿Conoces a Carlos Yepes? ¡Es un instructor de salsa y bachata
-              increíble! Únete a nuestras clases y descubre el ritmo que llevas
-              dentro.
+              Clases de salsa y bachata con Carlos yépez. Únete a nuestras
+              clases al aire libre y descubre el ritmo que llevas dentro.
             </p>
           </div>
 
@@ -53,7 +54,7 @@ export function Footer() {
             </h4>
             <div className="flex gap-3 justify-center md:justify-start">
               <a
-                href="https://www.facebook.com/hotlatindance"
+                href="https://www.facebook.com/profile.php?id=61583155394342"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all hover:bg-white/20 hover:scale-110 shadow-md"
@@ -68,7 +69,7 @@ export function Footer() {
                 </svg>
               </a>
               <a
-                href="https://www.instagram.com/hotlatindance"
+                href="https://www.instagram.com/bachataalairelibre/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all hover:bg-white/20 hover:scale-110 shadow-md"
@@ -103,7 +104,7 @@ export function Footer() {
 
         <div className="mt-8 border-t border-primary-foreground/20 pt-8 text-center">
           <p className="text-xs md:text-sm opacity-80">
-            © 2025 Carlos Yepes - Clases de Salsa y Bachata. {t.footer.rights}
+            © 2025 Bachata al Aire Libre - Carlos yépez. {t.footer.rights}
           </p>
         </div>
       </div>

@@ -50,7 +50,7 @@ export function MusicPlayer() {
       <Button
         onClick={togglePlay}
         size="icon"
-        className="fixed bottom-8 right-8 z-50 h-16 w-16 rounded-full bg-accent hover:bg-accent/90 text-white shadow-[0_8px_30px_rgba(220,38,38,0.5)] transition-all hover:scale-110 hover:shadow-[0_12px_40px_rgba(220,38,38,0.7)] animate-pulse"
+        className="fixed bottom-8 left-8 z-50 h-16 w-16 rounded-full bg-accent hover:bg-accent/90 text-white shadow-[0_8px_30px_rgba(220,38,38,0.5)] transition-all hover:scale-110 hover:shadow-[0_12px_40px_rgba(220,38,38,0.7)] animate-pulse"
         aria-label={isPlaying ? "Pausar música" : "Reproducir música"}
       >
         {isLoading ? (

@@ -1,6 +1,8 @@
 import { Header } from "@/components/header";
 import { Hero } from "@/components/hero";
 import { PhotoSlider } from "@/components/photo-slider";
+import { HowItWorks } from "@/components/how-it-works";
+import { Benefits } from "@/components/benefits";
 import { Pricing } from "@/components/pricing";
 import { Footer } from "@/components/footer";
 import { MusicPlayer } from "@/components/music-player";
@@ -14,6 +16,8 @@ export default function Home() {
         <MusicPlayer />
         <Hero />
         <PhotoSlider />
+        <HowItWorks />
+        <Benefits />
         <Pricing />
         <Footer />
       </main>

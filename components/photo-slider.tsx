@@ -1,100 +1,105 @@
-"use client"
+"use client";
 
-import { useLanguage } from "./language-provider"
-import { Card } from "./ui/card"
-import { useEffect, useState } from "react"
+import { useLanguage } from "./language-provider";
+import { Card } from "./ui/card";
+import { useEffect, useState } from "react";
 
 interface Photo {
-  id: string
+  id: string;
   urls: {
-    regular: string
-    small: string
-  }
-  alt_description: string | null
+    regular: string;
+    small: string;
+  };
+  alt_description: string | null;
 }
 
 export function PhotoSlider() {
-  const { t } = useLanguage()
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [photos, setPhotos] = useState<Photo[]>([])
-  const [loading, setLoading] = useState(true)
-
-  // Cargar imágenes de Unsplash al montar el componente
-  useEffect(() => {
-    const fetchPhotos = async () => {
-      try {
-        // Usamos la API de Unsplash
-        // Para producción, deberías obtener una API key en https://unsplash.com/developers
-        const queries = ["salsa dance", "bachata dance"]
-        const allPhotos: Photo[] = []
-        
-        for (const query of queries) {
-          // Hacemos fetch a la API de Unsplash
-          const response = await fetch(
-            `https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&per_page=8&client_id=AjqjOdBf4AXuxTNDqnX558xFb2pjKb78_fn3Sv2ZzCo`,
-            {
-              headers: {
-                'Accept': 'application/json'
-              }
-            }
-          )
-          
-          if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`)
-          }
-          
-          const data = await response.json()
-          
-          if (data.results && data.results.length > 0) {
-            const photos = data.results.map((photo: any) => ({
-              id: photo.id,
-              urls: {
-                regular: photo.urls.regular,
-                small: photo.urls.small
-              },
-              alt_description: photo.alt_description || photo.description || `${query} photo`
-            }))
-            allPhotos.push(...photos)
-          }
-        }
-        
-        // Eliminar duplicados basándose en el ID
-        const uniquePhotos = allPhotos.filter((photo, index, self) =>
-          index === self.findIndex((p) => p.id === photo.id)
-        )
-        
-        // Mezclar aleatoriamente y tomar solo 15 fotos
-        const shuffled = uniquePhotos.sort(() => Math.random() - 0.5)
-        setPhotos(shuffled.slice(0, 15))
-        setLoading(false)
-      } catch (error) {
-        console.error("Error loading photos:", error)
-        // En caso de error, usamos imágenes de placeholder
-        const fallbackPhotos = Array.from({ length: 15 }, (_, i) => ({
-          id: `placeholder-${i}`,
-          urls: {
-            regular: `https://images.unsplash.com/photo-${1500000000000 + i * 100000}?w=1600&h=900&fit=crop`,
-            small: `https://images.unsplash.com/photo-${1500000000000 + i * 100000}?w=400&h=300&fit=crop`
-          },
-          alt_description: i % 2 === 0 ? "Salsa dance" : "Bachata dance"
-        }))
-        setPhotos(fallbackPhotos)
-        setLoading(false)
-      }
-    }
-
-    fetchPhotos()
-  }, [])
+  const { t } = useLanguage();
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [photos] = useState<Photo[]>([
+    {
+      id: "1",
+      urls: {
+        regular: "/images/slider (1).jpg",
+        small: "/images/slider (1).jpg",
+      },
+      alt_description: "Salsa dance class",
+    },
+    {
+      id: "2",
+      urls: {
+        regular: "/images/slider (2).jpg",
+        small: "/images/slider (2).jpg",
+      },
+      alt_description: "Bachata dance",
+    },
+    {
+      id: "3",
+      urls: {
+        regular: "/images/slider (3).jpg",
+        small: "/images/slider (3).jpg",
+      },
+      alt_description: "Dance performance",
+    },
+    {
+      id: "4",
+      urls: {
+        regular: "/images/slider (4).jpg",
+        small: "/images/slider (4).jpg",
+      },
+      alt_description: "Latin dance",
+    },
+    {
+      id: "5",
+      urls: {
+        regular: "/images/slider (5).jpg",
+        small: "/images/slider (5).jpg",
+      },
+      alt_description: "Salsa couple",
+    },
+    {
+      id: "6",
+      urls: {
+        regular: "/images/slider (6).jpg",
+        small: "/images/slider (6).jpg",
+      },
+      alt_description: "Dance lessons",
+    },
+    {
+      id: "7",
+      urls: {
+        regular: "/images/slider (7).jpg",
+        small: "/images/slider (7).jpg",
+      },
+      alt_description: "Bachata couple",
+    },
+    {
+      id: "8",
+      urls: {
+        regular: "/images/slider (8).jpg",
+        small: "/images/slider (8).jpg",
+      },
+      alt_description: "Dance community",
+    },
+    {
+      id: "9",
+      urls: {
+        regular: "/images/slider (9).jpg",
+        small: "/images/slider (9).jpg",
+      },
+      alt_description: "Salsa party",
+    },
+  ]);
 
   useEffect(() => {
     // Solo iniciar el intervalo si hay fotos cargadas
-    if (photos.length === 0) return
+    if (photos.length === 0) return;
 
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % photos.length)
-    }, 4000)
-    return () => clearInterval(interval)
-  }, [photos.length])
+      setCurrentIndex((prev) => (prev + 1) % photos.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [photos.length]);
 
   return (
     <section className="bg-muted py-20 px-4">
@@ -106,26 +111,20 @@ export function PhotoSlider() {
         <div className="relative mx-auto max-w-6xl">
           {/* Main Slider */}
           <div className="relative aspect-video overflow-hidden rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.25)]">
-            {loading ? (
-              <div className="flex h-full w-full items-center justify-center bg-muted">
-                <p className="text-muted-foreground">Cargando imágenes...</p>
+            {photos.map((photo, index) => (
+              <div
+                key={photo.id}
+                className={`absolute inset-0 transition-opacity duration-1000 ${
+                  index === currentIndex ? "opacity-100" : "opacity-0"
+                }`}
+              >
+                <img
+                  src={photo.urls.regular}
+                  alt={photo.alt_description || `Dance photo ${index + 1}`}
+                  className="h-full w-full object-cover"
+                />
               </div>
-            ) : (
-              photos.map((photo, index) => (
-                <div
-                  key={photo.id}
-                  className={`absolute inset-0 transition-opacity duration-1000 ${
-                    index === currentIndex ? "opacity-100" : "opacity-0"
-                  }`}
-                >
-                  <img
-                    src={photo.urls.regular}
-                    alt={photo.alt_description || `Dance photo ${index + 1}`}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-              ))
-            )}
+            ))}
           </div>
 
           {/* Thumbnails */}
@@ -154,7 +153,9 @@ export function PhotoSlider() {
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`h-3 w-3 rounded-full transition-all ${
-                  index === currentIndex ? "bg-primary w-8" : "bg-primary/30 hover:bg-primary/50"
+                  index === currentIndex
+                    ? "bg-primary w-8"
+                    : "bg-primary/30 hover:bg-primary/50"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
@@ -163,5 +164,5 @@ export function PhotoSlider() {
         </div>
       </div>
     </section>
-  )
+  );
 }
