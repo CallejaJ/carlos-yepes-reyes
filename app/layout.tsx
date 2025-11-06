@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import WhatsAppWidget from "@/components/whatsapp-widget";
-import "./globals.css";
+import "../styles/globals.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -132,7 +132,7 @@ export default function RootLayout({
     },
     sameAs: [
       "https://www.instagram.com/bachataalairelibre",
-      "https://www.tiktok.com/@hotlatindance",
+      "https://www.tiktok.com/@bachataalairelibre",
       "https://www.facebook.com/profile.php?id=61583155394342",
     ],
   };

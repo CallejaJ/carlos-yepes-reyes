@@ -30,77 +30,121 @@ export function Pricing() {
         <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-2">
           {/* Individual Pricing */}
           <Card className="border-2 border-secondary shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all hover:shadow-[0_16px_48px_rgba(0,0,0,0.18)] hover:scale-105 relative overflow-hidden flex flex-col">
-            <div className="absolute top-4 right-4 bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm font-bold shadow-md">
+            {/* Video Background */}
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover z-0"
+            >
+              <source src="/videos/individual.mp4" type="video/mp4" />
+            </video>
+            {/* Dark Overlay */}
+            <div className="absolute inset-0 bg-black/40 z-0"></div>
+
+            {/* Content */}
+            <div className="absolute top-4 right-4 bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm font-bold shadow-md z-10">
               ¡PROMO!
             </div>
-            <CardHeader className="text-center min-h-[120px] flex flex-col justify-center">
-              <CardTitle className="text-3xl font-bold text-card-foreground">
+            <CardHeader className="text-center relative z-10">
+              <CardTitle className="text-3xl font-bold text-white drop-shadow-lg">
                 {t.pricing.individual}
               </CardTitle>
-              <CardDescription className="text-lg">
-                {t.pricing.perPerson}
-              </CardDescription>
             </CardHeader>
-            <CardContent className="flex-grow">
+            <CardContent className="flex-grow relative z-10">
               <div className="mb-6 text-center">
-                <span className="text-5xl font-bold text-primary">€10</span>
+                <span className="text-5xl font-bold text-white drop-shadow-lg">
+                  €10
+                </span>
               </div>
-              <div className="mb-4 text-center bg-secondary/20 rounded-lg py-2 px-3">
-                <span className="text-secondary-foreground font-semibold">
+              <div className="mb-4 text-center bg-white/90 backdrop-blur-sm rounded-lg py-2 px-3">
+                <span className="text-foreground font-semibold">
                   + {t.pricing.freePartner}
                 </span>
               </div>
               <ul className="space-y-3">
                 {t.pricing.features.map((feature, index) => (
                   <li key={index} className="flex items-center gap-3">
-                    <Check className="h-5 w-5 flex-shrink-0 text-primary" />
-                    <span className="text-card-foreground">{feature}</span>
+                    <Check className="h-5 w-5 flex-shrink-0 text-white drop-shadow-md" />
+                    <span className="text-white drop-shadow-md">{feature}</span>
                   </li>
                 ))}
               </ul>
             </CardContent>
-            <CardFooter>
-              <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg py-6 shadow-md hover:shadow-lg transition-shadow">
-                {t.pricing.cta}
+            <CardFooter className="relative z-10">
+              <Button
+                asChild
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg py-6 shadow-md hover:shadow-lg transition-shadow"
+              >
+                <a
+                  href="https://wa.me/34698501676?text=Hola%2C%20me%20interesa%20la%20clase%20individual%20de%20bachata"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t.pricing.cta}
+                </a>
               </Button>
             </CardFooter>
           </Card>
 
           {/* Private Pricing */}
-          <Card className="border-2 shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all hover:shadow-[0_16px_48px_rgba(0,0,0,0.18)] hover:scale-105 flex flex-col">
-            <CardHeader className="text-center min-h-[120px] flex flex-col justify-center">
-              <CardTitle className="text-3xl font-bold text-card-foreground">
+          <Card className="border-2 shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all hover:shadow-[0_16px_48px_rgba(0,0,0,0.18)] hover:scale-105 relative overflow-hidden flex flex-col">
+            {/* Video Background */}
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover z-0"
+            >
+              <source src="/videos/private.mp4" type="video/mp4" />
+            </video>
+            {/* Dark Overlay */}
+            <div className="absolute inset-0 bg-black/40 z-0"></div>
+
+            {/* Content */}
+            <CardHeader className="text-center relative z-10">
+              <CardTitle className="text-3xl font-bold text-white drop-shadow-lg">
                 {t.pricing.private}
               </CardTitle>
-              <CardDescription className="text-lg">
-                {t.pricing.privateDesc}
-              </CardDescription>
             </CardHeader>
-            <CardContent className="flex-grow">
+            <CardContent className="flex-grow relative z-10">
               <div className="mb-6 text-center">
-                <span className="text-5xl font-bold text-primary">€25</span>
-                <span className="text-muted-foreground text-xl">
+                <span className="text-5xl font-bold text-white drop-shadow-lg">
+                  €25
+                </span>
+                <span className="text-white text-xl drop-shadow-md">
                   {" "}
                   {t.pricing.perHour}
                 </span>
               </div>
-              <div className="mb-4 text-center bg-secondary/20 rounded-lg py-2 px-3">
-                <span className="text-secondary-foreground font-semibold">
+              <div className="mb-4 text-center bg-white/90 backdrop-blur-sm rounded-lg py-2 px-3">
+                <span className="text-foreground font-semibold">
                   {t.pricing.privatePromo}
                 </span>
               </div>
               <ul className="space-y-3">
                 {t.pricing.privateFeatures.map((feature, index) => (
                   <li key={index} className="flex items-center gap-3">
-                    <Check className="h-5 w-5 flex-shrink-0 text-primary" />
-                    <span className="text-card-foreground">{feature}</span>
+                    <Check className="h-5 w-5 flex-shrink-0 text-white drop-shadow-md" />
+                    <span className="text-white drop-shadow-md">{feature}</span>
                   </li>
                 ))}
               </ul>
             </CardContent>
-            <CardFooter>
-              <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg py-6 shadow-md hover:shadow-lg transition-shadow">
-                {t.pricing.cta}
+            <CardFooter className="relative z-10">
+              <Button
+                asChild
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold text-lg py-6 shadow-md hover:shadow-lg transition-shadow"
+              >
+                <a
+                  href="https://wa.me/34698501676?text=Hola%2C%20me%20interesa%20la%20clase%20privada%20de%20bachata"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t.pricing.cta}
+                </a>
               </Button>
             </CardFooter>
           </Card>

@@ -33,7 +33,7 @@ export function Footer() {
               <div className="flex items-center justify-center md:justify-start gap-3">
                 <Mail className="h-5 w-5 flex-shrink-0" />
                 <span className="text-sm md:text-base">
-                  info@hotlatindance.com
+                  info@bachataalairelibre.com
                 </span>
               </div>
               <div className="flex items-center justify-center md:justify-start gap-3">
@@ -84,7 +84,7 @@ export function Footer() {
                 </svg>
               </a>
               <a
-                href="https://www.tiktok.com/@hotlatindance"
+                href="https://www.tiktok.com/@bachataalairelibre"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all hover:bg-white/20 hover:scale-110 shadow-md"
