@@ -25,15 +25,29 @@ export default function Icon() {
           position: "relative",
         }}
       >
-        {/* Maracas con emoji */}
+        {/* Círculo blanco de fondo */}
         <div
           style={{
-            fontSize: 120,
+            background: "white",
+            width: "140px",
+            height: "140px",
+            borderRadius: "50%",
             display: "flex",
-            transform: "rotate(-15deg)",
+            alignItems: "center",
+            justifyContent: "center",
+            boxShadow: "0 8px 24px rgba(0,0,0,0.2)",
           }}
         >
-          🪇
+          {/* Maracas con emoji */}
+          <div
+            style={{
+              fontSize: 100,
+              display: "flex",
+              transform: "rotate(-15deg)",
+            }}
+          >
+            🪇
+          </div>
         </div>
       </div>
     ),
