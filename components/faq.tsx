@@ -1,18 +1,15 @@
 "use client";
 
 import { useLanguage } from "./language-provider";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "./ui/accordion";
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 export function FAQ() {
   const { t } = useLanguage();
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="bg-background pt-20 pb-24 px-4">
+    <section className="bg-background py-20 px-4">
       <div className="container mx-auto max-w-4xl">
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-balance font-bold text-foreground text-4xl md:text-5xl">
@@ -23,24 +20,35 @@ export function FAQ() {
           </p>
         </div>
 
-        <Accordion type="single" collapsible className="w-full space-y-4">
+        <div className="w-full space-y-4">
           {t.faq.questions.map((item, index) => (
-            <AccordionItem
+            <div
               key={index}
-              value={`item-${index}`}
-              className={`border-2 rounded-lg px-6 hover:border-primary transition-colors ${
-                index === t.faq.questions.length - 1 ? "mb-4" : ""
-              }`}
+              className="border-2 rounded-lg hover:border-primary transition-colors"
             >
-              <AccordionTrigger className="text-left text-lg font-semibold hover:text-primary py-6">
-                {item.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground text-base leading-relaxed pb-6">
-                {item.answer}
-              </AccordionContent>
-            </AccordionItem>
+              <button
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                className="w-full text-left px-6 py-6 flex justify-between items-start gap-4"
+              >
+                <span className="text-lg font-semibold hover:text-primary">
+                  {item.question}
+                </span>
+                <ChevronDown
+                  className={`w-5 h-5 flex-shrink-0 transition-transform ${
+                    openIndex === index ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              {openIndex === index && (
+                <div className="px-6 pb-6 pt-2">
+                  <p className="text-muted-foreground text-base leading-relaxed">
+                    {item.answer}
+                  </p>
+                </div>
+              )}
+            </div>
           ))}
-        </Accordion>
+        </div>
 
         {/* Schema.org FAQ Markup */}
         <script
