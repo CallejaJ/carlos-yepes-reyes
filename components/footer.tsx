@@ -9,62 +9,58 @@ export function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground py-8 px-4">
       <div className="container mx-auto">
-        <div className="grid gap-8 md:grid-cols-3 md:items-start">
+        <div className="grid gap-4 md:grid-cols-3 md:items-center">
           {/* Logo */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <div className="mb-3 flex items-center gap-2">
-              <Music className="h-8 w-8 md:h-10 md:w-10" />
-            </div>
-            <h3 className="text-lg md:text-xl font-bold mb-3">
-              Bachata al Aire Libre
+            <h3 className="text-lg md:text-xl font-bold mb-1">
+              Bachata al Aire Libre en Málaga
             </h3>
-            <p className="text-xs md:text-sm opacity-70 italic leading-relaxed max-w-xs">
-              Clases de salsa y bachata con Carlos Yépez. Únete a nuestras
-              clases al aire libre y descubre el ritmo que llevas dentro.
+            <p className="text-sm opacity-70 leading-tight max-w-xs">
+              Clases de salsa y bachata con Carlos Yépez
             </p>
           </div>
 
           {/* Contact Info */}
-          <div className="text-center md:text-left md:pt-[52px]">
-            <h4 className="mb-4 text-base md:text-lg font-semibold opacity-90">
+          <div className="text-center md:text-left">
+            <h4 className="mb-2 text-base md:text-lg font-semibold opacity-90">
               {t.footer.contact}
             </h4>
-            <div className="space-y-3">
-              <div className="flex items-center justify-center md:justify-start gap-3">
+            <div className="space-y-1">
+              <div className="flex items-center justify-center md:justify-start gap-2">
                 <Mail className="h-4 w-4 flex-shrink-0 opacity-70" />
                 <a
                   href="mailto:bachataalairelibrelibre@gmail.com"
-                  className="text-xs md:text-sm hover:underline opacity-80 hover:opacity-100"
+                  className="text-sm hover:underline opacity-80 hover:opacity-100"
                 >
                   bachataalairelibrelibre@gmail.com
                 </a>
               </div>
-              <div className="flex items-center justify-center md:justify-start gap-3">
+              <div className="flex items-center justify-center md:justify-start gap-2">
                 <Phone className="h-4 w-4 flex-shrink-0 opacity-70" />
-                <span className="text-xs md:text-sm opacity-80">+34 698 50 16 76</span>
+                <span className="text-sm opacity-80">+34 698 50 16 76</span>
               </div>
-              <div className="flex items-center justify-center md:justify-start gap-3">
+              <div className="flex items-center justify-center md:justify-start gap-2">
                 <MapPin className="h-4 w-4 flex-shrink-0 opacity-70" />
-                <span className="text-xs md:text-sm opacity-80">Málaga, Spain</span>
+                <span className="text-sm opacity-80">Málaga, Spain</span>
               </div>
             </div>
           </div>
 
           {/* Social Links */}
-          <div className="text-center md:text-left md:pt-[52px]">
-            <h4 className="mb-4 text-base md:text-lg font-semibold opacity-90">
+          <div className="text-center md:text-left">
+            <h4 className="mb-2 text-base md:text-lg font-semibold opacity-90">
               Social Media
             </h4>
-            <div className="flex gap-3 justify-center md:justify-start">
+            <div className="flex gap-2 justify-center md:justify-start">
               <a
                 href="https://www.facebook.com/profile.php?id=61583155394342"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all hover:bg-white/20 hover:scale-110 shadow-sm"
+                className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all hover:bg-white/20 hover:scale-110 shadow-sm"
                 aria-label="Facebook"
               >
                 <svg
-                  className="h-4 w-4"
+                  className="h-3.5 w-3.5"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -75,11 +71,11 @@ export function Footer() {
                 href="https://www.instagram.com/bachataalairelibre/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all hover:bg-white/20 hover:scale-110 shadow-sm"
+                className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all hover:bg-white/20 hover:scale-110 shadow-sm"
                 aria-label="Instagram"
               >
                 <svg
-                  className="h-4 w-4"
+                  className="h-3.5 w-3.5"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -90,11 +86,11 @@ export function Footer() {
                 href="https://www.tiktok.com/@bachataalairelibre"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all hover:bg-white/20 hover:scale-110 shadow-sm"
+                className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-all hover:bg-white/20 hover:scale-110 shadow-sm"
                 aria-label="TikTok"
               >
                 <svg
-                  className="h-4 w-4"
+                  className="h-3.5 w-3.5"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -105,8 +101,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-primary-foreground/20 pt-8 text-center">
-          <p className="text-xs md:text-sm opacity-80">
+        <div className="mt-6 border-t border-primary-foreground/20 pt-6 text-center">
+          <p className="text-sm opacity-80">
             © 2025 Bachata al Aire Libre - Carlos Yépez. {t.footer.rights}
           </p>
         </div>
