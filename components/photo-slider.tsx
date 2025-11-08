@@ -52,8 +52,8 @@ export function PhotoSlider() {
     {
       id: "5",
       urls: {
-        regular: "/images/slider (5).jpg",
-        small: "/images/slider (5).jpg",
+        regular: "/images/slider (5).jpeg",
+        small: "/images/slider (5).jpeg",
       },
       alt_description: "Salsa couple",
     },
@@ -76,8 +76,8 @@ export function PhotoSlider() {
     {
       id: "8",
       urls: {
-        regular: "/images/slider (8).jpg",
-        small: "/images/slider (8).jpg",
+        regular: "/images/slider (8).jpeg",
+        small: "/images/slider (8).jpeg",
       },
       alt_description: "Dance community",
     },
@@ -108,50 +108,58 @@ export function PhotoSlider() {
     {
       id: "12",
       urls: {
-        regular: "/images/slider (14).jpeg",
-        small: "/images/slider (14).jpeg",
+        regular: "/images/slider (12).jpeg",
+        small: "/images/slider (12).jpeg",
       },
       alt_description: "Outdoor dance session",
     },
     {
       id: "13",
       urls: {
-        regular: "/images/slider (15).jpeg",
-        small: "/images/slider (15).jpeg",
+        regular: "/images/slider (13).jpeg",
+        small: "/images/slider (13).jpeg",
       },
       alt_description: "Dancing together",
     },
     {
       id: "14",
       urls: {
-        regular: "/images/slider (17).jpeg",
-        small: "/images/slider (17).jpeg",
+        regular: "/images/slider (14).jpeg",
+        small: "/images/slider (14).jpeg",
       },
       alt_description: "Salsa moves",
     },
     {
       id: "15",
       urls: {
-        regular: "/images/slider (18).jpeg",
-        small: "/images/slider (18).jpeg",
+        regular: "/images/slider (15).jpeg",
+        small: "/images/slider (15).jpeg",
       },
       alt_description: "Dance practice",
     },
     {
       id: "16",
       urls: {
-        regular: "/images/slider (19).jpeg",
-        small: "/images/slider (19).jpeg",
+        regular: "/images/slider (16).jpeg",
+        small: "/images/slider (16).jpeg",
       },
       alt_description: "Group dancing",
     },
     {
       id: "17",
       urls: {
-        regular: "/images/slider (20).jpeg",
-        small: "/images/slider (20).jpeg",
+        regular: "/images/slider (17).jpeg",
+        small: "/images/slider (17).jpeg",
       },
       alt_description: "Bachata al aire libre",
+    },
+    {
+      id: "18",
+      urls: {
+        regular: "/images/slider (18).jpeg",
+        small: "/images/slider (18).jpeg",
+      },
+      alt_description: "Dance event",
     },
   ]);
 
