@@ -39,7 +39,7 @@ export function Benefits() {
   ]
 
   return (
-    <section className="py-20 px-4 bg-muted">
+    <section id="beneficios" className="py-20 px-4 bg-card/50">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">

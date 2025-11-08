@@ -127,3 +127,60 @@
     max-width: 100vw;
   }
 }
+
+@layer components {
+  .prose {
+    --prose-body: var(--color-foreground);
+    --prose-headings: var(--color-foreground);
+    --prose-links: var(--color-primary);
+    --prose-bold: var(--color-foreground);
+    --prose-counters: var(--color-muted-foreground);
+    --prose-bullets: var(--color-primary);
+    --prose-quotes: var(--color-muted-foreground);
+    --prose-code: var(--color-primary);
+  }
+
+  .prose ul {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding-left: 1.625em;
+    list-style-type: disc;
+  }
+
+  .prose ol {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding-left: 1.625em;
+    list-style-type: decimal;
+  }
+
+  .prose li {
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+    padding-left: 0.375em;
+  }
+
+  .prose li::marker {
+    color: var(--color-primary);
+  }
+
+  .prose p {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+
+  .prose h2 {
+    margin-top: 2.5em;
+    margin-bottom: 1.25em;
+  }
+
+  .prose h3 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
+
+  .prose h4 {
+    margin-top: 1.75em;
+    margin-bottom: 0.75em;
+  }
+}

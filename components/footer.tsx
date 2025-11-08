@@ -100,12 +100,20 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Legal Links */}
+          {/* Legal & Blog Links */}
           <div className="text-center">
             <h4 className="mb-2 text-base md:text-lg font-semibold opacity-90">
-              Legal
+              Enlaces
             </h4>
             <div className="space-y-1">
+              <div>
+                <a
+                  href="/blog"
+                  className="text-sm hover:underline opacity-80 hover:opacity-100"
+                >
+                  Blog
+                </a>
+              </div>
               <div>
                 <a
                   href="/aviso-legal"
