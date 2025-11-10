@@ -13,9 +13,10 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Bachata al Aire Libre - Clases de Salsa y Bachata | Carlos Yépez",
+  title:
+    "Bachata al Aire Libre | Clases de Salsa y Bachata en Málaga con Carlos Yépez",
   description:
-    "Clases de salsa y bachata al aire libre en Málaga. Aprende a bailar con Carlos Yépez en grupos reducidos (5-20 personas). Ambiente divertido y atención personalizada.",
+    "Clases de salsa y bachata al aire libre en Málaga con Carlos Yépez. Grupos reducidos, ambiente divertido y atención personalizada.",
   keywords:
     "bachata al aire libre, clases de salsa Málaga, clases de bachata Málaga, Carlos Yépez, baile latino, salsa, bachata, clases de baile Málaga, bachata Málaga, salsa Málaga",
   authors: [{ name: "Carlos Yépez" }],
@@ -35,9 +36,10 @@ export const metadata: Metadata = {
     shortcut: "/favicon/favicon.ico",
   },
   openGraph: {
-    title: "Bachata al Aire Libre - Clases de Salsa y Bachata | Carlos Yépez",
+    title:
+      "Bachata al Aire Libre | Clases de Salsa y Bachata en Málaga con Carlos Yépez",
     description:
-      "Aprende salsa y bachata con Carlos Yépez en Málaga. Clases al aire libre en grupos reducidos. €10/hora + pareja gratis.",
+      "Clases de salsa y bachata al aire libre en Málaga con Carlos Yépez. Grupos reducidos y ambiente divertido.",
     url: "https://www.bachataalairelibre.com/",
     siteName: "Bachata al Aire Libre",
     locale: "es_ES",
@@ -53,9 +55,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bachata al Aire Libre - Clases de Salsa y Bachata",
+    title:
+      "Bachata al Aire Libre | Clases de Salsa y Bachata en Málaga con Carlos Yépez",
     description:
-      "Aprende salsa y bachata con Carlos Yépez en Málaga. €10/hora + pareja gratis.",
+      "Clases de salsa y bachata al aire libre en Málaga con Carlos Yépez. Grupos reducidos y ambiente divertido.",
     images: ["/hero.jpg"],
     creator: "@bachataalairelibre",
   },
@@ -84,9 +87,9 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": "https://www.bachataalairelibre.com/",
-    name: "Bachata al Aire Libre",
+    name: "Bachata al Aire Libre | Clases de Salsa y Bachata en Málaga con Carlos Yépez",
     description:
-      "Clases de salsa y bachata al aire libre en Málaga con Carlos Yépez",
+      "Clases de salsa y bachata al aire libre en Málaga con Carlos Yépez. Grupos reducidos y ambiente divertido.",
     url: "https://www.bachataalairelibre.com/",
     telephone: "+34698501676",
     priceRange: "€€",

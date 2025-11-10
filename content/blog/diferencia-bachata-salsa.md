@@ -323,4 +323,12 @@ Pero si ya tienes algo de experiencia, también ofrezco workshops de **salsa** o
 
 ---
 
-_¿Quieres probar una clase de bachata o salsa en Málaga? Escríbeme a bachataalairelibrelibre@gmail.com_
+## _¿Estás en Malaga capital y quieres aprender a bailar bachata al aire libre? Contacta conmigo: bachataalairelibrelibre@gmail.com o +34 698 50 16 76_
+
+## Sigue explorando
+
+- [Tarifas de clases de bachata y salsa](/#tarifas)
+- [Reserva tu clase de bachata](/#reserva)
+- [Cómo funcionan las clases al aire libre](/#como-funciona)
+- [Beneficios de bailar bachata](/#beneficios)
+- [¿Qué Ropa y Zapatos Usar para Bailar Bachata?](/blog/ropa-zapatos-bailar-bachata)

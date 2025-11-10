@@ -431,4 +431,12 @@ Tu yo del futuro te lo agradecerá.
 
 ---
 
-_¿Tienes más de 40 y quieres probar bachata en Málaga? Primera clase gratis. Contáctame: bachataalairelibrelibre@gmail.com o +34 698 50 16 76_
+## _¿Tienes más de 40 y quieres probar bachata en Málaga? Contacta conmigo: bachataalairelibrelibre@gmail.com o +34 698 50 16 76_
+
+## Sigue explorando
+
+- [Tarifas de clases de bachata y salsa](/#tarifas)
+- [Reserva tu clase de bachata](/#reserva)
+- [Cómo funcionan las clases al aire libre](/#como-funciona)
+- [Beneficios de bailar bachata](/#beneficios)
+- [¿Qué Ropa y Zapatos Usar para Bailar Bachata?](/blog/ropa-zapatos-bailar-bachata)
