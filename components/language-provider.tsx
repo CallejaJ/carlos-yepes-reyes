@@ -185,7 +185,7 @@ const translations: Record<Language, Translations> = {
         {
           question: "Where do bachata classes take place in Málaga?",
           answer:
-            "Our outdoor bachata and salsa classes are held in a unique location in the heart of Málaga, at C/ Alcazabilla, 1, right next to the Roman Theatre and the Alcazaba. An unbeatable atmosphere to learn Latin dance under the Málaga sky!",
+            "Classes are held outdoors in Málaga, meeting point is at Calle Alcazabilla, 1, next to the entrance to the Alcazaba. It's a perfect spot to dance with spectacular views and a unique atmosphere in the heart of Málaga.",
         },
         {
           question: "Do I need previous experience?",
@@ -332,7 +332,7 @@ const translations: Record<Language, Translations> = {
         {
           question: "Wo finden die Bachata-Kurse in Málaga statt?",
           answer:
-            "Unsere Bachata- und Salsa-Kurse im Freien finden an einem einzigartigen Ort im Herzen von Málaga statt, in der C/ Alcazabilla, 1, direkt neben dem Römischen Theater und der Alcazaba. Eine unschlagbare Atmosphäre, um lateinamerikanischen Tanz unter dem Himmel von Málaga zu lernen!",
+            "Die Kurse finden im Freien in Málaga statt, Treffpunkt ist die Calle Alcazabilla 1, direkt am Eingang zur Alcazaba. Es ist ein perfekter Ort zum Tanzen mit spektakulärer Aussicht und einzigartiger Atmosphäre im Zentrum von Málaga.",
         },
         {
           question: "Brauche ich Vorkenntnisse?",
@@ -365,7 +365,7 @@ const translations: Record<Language, Translations> = {
           question:
             "Unterrichten Sie nur Bachata oder auch andere lateinamerikanische Rhythmen?",
           answer:
-            "Wir spezialisieren uns sowohl auf Bachata als auch auf Salsa! In unseren Kursen in Málaga lernen Sie beide Stile, da sie sich perfekt ergänzen und es Ihnen ermöglichen, auf jeder Latin-Party oder sozialen Veranstaltung zu tanzen.",
+            "Wir unterrichten sowohl Bachata als auch Salsa. Beide lateinamerikanischen Rhythmen haben eine unterschiedliche Lernkurve. Du lernst die Grundlagen jedes Stils und in jeder Stunde neue Choreografien.",
         },
         {
           question: "Wie kann ich meinen Bachata-Kurs in Málaga buchen?",
@@ -483,7 +483,7 @@ const translations: Record<Language, Translations> = {
         {
           question: "Où se déroulent les cours de bachata à Málaga ?",
           answer:
-            "Nos cours de bachata et salsa en plein air se déroulent dans un lieu unique au cœur de Málaga, C/ Alcazabilla, 1, juste à côté du Théâtre Romain et de l'Alcazaba. Une atmosphère imbattable pour apprendre la danse latine sous le ciel de Málaga !",
+            "Les cours ont lieu en plein air à Málaga, le point de rendez-vous est Calle Alcazabilla, 1, à l'entrée de l'Alcazaba. C'est un endroit parfait pour danser avec une vue spectaculaire et une ambiance unique au cœur de Málaga.",
         },
         {
           question: "Ai-je besoin d'une expérience préalable ?",
@@ -515,7 +515,7 @@ const translations: Record<Language, Translations> = {
           question:
             "Enseignez-vous uniquement la bachata ou d'autres rythmes latins aussi ?",
           answer:
-            "Nous nous spécialisons à la fois dans la bachata et la salsa ! Dans nos cours à Málaga, vous apprendrez les deux styles, car ils se complètent parfaitement et vous permettent de danser lors de n'importe quelle fête latine ou événement social.",
+            "Nous enseignons la bachata et la salsa. Ces deux rythmes latins ont une courbe d'apprentissage différente. Vous apprendrez les bases de chaque style et de nouvelles chorégraphies à chaque cours.",
         },
         {
           question: "Comment puis-je réserver mon cours de bachata à Málaga ?",
@@ -633,7 +633,7 @@ const translations: Record<Language, Translations> = {
         {
           question: "¿Dónde se imparten las clases de bachata en Málaga?",
           answer:
-            "Las clases se realizan al aire libre en Málaga, específicamente en C/ Alcazabilla, 1, junto a la Alcazaba. Es un espacio perfecto para bailar con vistas espectaculares y un ambiente único en el centro de Málaga.",
+            "Las clases se realizan al aire libre en Málaga, el punto de encuentro está en calle Alcazabilla, 1, junto a la entrada a la Alcazaba. Es un espacio perfecto para bailar con vistas espectaculares y un ambiente único en el centro de Málaga.",
         },
         {
           question:
@@ -665,7 +665,7 @@ const translations: Record<Language, Translations> = {
         {
           question: "¿Enseñan solo bachata o también otros ritmos latinos?",
           answer:
-            "Enseñamos tanto bachata como salsa. Cada sesión combina ambos ritmos latinos, permitiéndote ampliar tu repertorio de baile. Aprenderás los fundamentos de cada estilo y nuevas coreografías en cada clase.",
+            "Enseñamos tanto bachata como salsa. Ambos ritmos latinos tienen una curva de aprendizaje distinta. Aprenderás los fundamentos de cada estilo y nuevas coreografías en cada clase.",
         },
         {
           question: "¿Cómo puedo reservar mi clase de bachata en Málaga?",
