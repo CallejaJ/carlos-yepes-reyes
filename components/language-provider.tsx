@@ -95,7 +95,7 @@ interface Translations {
 const translations: Record<Language, Translations> = {
   en: {
     hero: {
-      title: "OUTDOOR BACHATA",
+      title: "",
       subtitle:
         "Learn Salsa & Bachata with passion! Small groups (5-20 people) for personalized attention",
       cta: "Book Your Class",
@@ -243,7 +243,7 @@ const translations: Record<Language, Translations> = {
   },
   de: {
     hero: {
-      title: "BACHATA IM FREIEN",
+      title: "",
       subtitle:
         "Lerne Salsa & Bachata mit Leidenschaft! Kleine Gruppen (5-20 Personen) für persönliche Betreuung",
       cta: "Buche deinen Kurs",
@@ -393,7 +393,7 @@ const translations: Record<Language, Translations> = {
   },
   fr: {
     hero: {
-      title: "BACHATA EN PLEIN AIR",
+      title: "",
       subtitle:
         "Apprends la Salsa & Bachata avec passion ! Petits groupes (5-20 personnes) pour une attention personnalisée",
       cta: "Réserve ton cours",
@@ -543,7 +543,7 @@ const translations: Record<Language, Translations> = {
   },
   es: {
     hero: {
-      title: "BACHATA AL AIRE LIBRE",
+      title: "",
       subtitle:
         "¡Aprende Salsa y Bachata con pasión! Grupos reducidos (5-20 personas) para atención personalizada",
       cta: "Reserva Tu Clase",

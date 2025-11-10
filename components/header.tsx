@@ -31,7 +31,7 @@ export function Header() {
 
   const handleNavClick = (sectionId: string) => {
     setIsMobileMenuOpen(false);
-    
+
     // Si estamos en la home, hacer scroll
     if (pathname === "/") {
       const section = document.getElementById(sectionId);
@@ -55,10 +55,18 @@ export function Header() {
   };
 
   const navItems = [
-    { label: t.hero.title || "Inicio", action: () => handleLogoClick() },
-    { label: t.howItWorks.title || "Cómo Funciona", action: () => handleNavClick("como-funciona") },
-    { label: t.benefits.title || "Beneficios", action: () => handleNavClick("beneficios") },
-    { label: t.pricing.title || "Precios", action: () => handleNavClick("pricing") },
+    {
+      label: t.howItWorks.title || "Cómo Funciona",
+      action: () => handleNavClick("como-funciona"),
+    },
+    {
+      label: t.benefits.title || "Beneficios",
+      action: () => handleNavClick("beneficios"),
+    },
+    {
+      label: t.pricing.title || "Precios",
+      action: () => handleNavClick("pricing"),
+    },
     { label: t.footer.blog || "Blog", action: () => handleBlogClick() },
   ];
 
@@ -73,21 +81,24 @@ export function Header() {
       <div className="container mx-auto px-4 py-3 md:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <button
-            onClick={handleLogoClick}
-            className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity z-50"
-          >
-            <Image 
-              src="/logo/logo-trans.png" 
-              alt="Logo" 
-              width={32} 
-              height={32}
-              className="h-6 w-6 md:h-8 md:w-8 invert brightness-0 drop-shadow-lg"
-            />
+          <div className="flex items-center gap-2 z-50">
+            <button
+              aria-label="inicio"
+              onClick={handleLogoClick}
+              className="cursor-pointer hover:opacity-80 transition-opacity"
+            >
+              <Image
+                src="/logo/logo-trans.png"
+                alt="Logo"
+                width={64}
+                height={64}
+                className="h-8 w-8 md:h-10 md:w-10 invert brightness-0 drop-shadow-lg"
+              />
+            </button>
             <span className="text-base md:text-xl font-bold text-white drop-shadow-lg">
               Carlos Yépez
             </span>
-          </button>
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-1">
@@ -139,11 +150,19 @@ export function Header() {
           <nav className="lg:hidden mt-4 pb-4 space-y-1 border-t border-white/10 pt-4">
             {/* Idiomas en menú hamburguesa - estilo borde blanco, fondo transparente */}
             <div className="flex gap-2 mb-2 justify-center">
-              {['es','en','de','fr'].map((lang) => (
+              {["es", "en", "de", "fr"].map((lang) => (
                 <button
                   key={lang}
-                  className={`px-3 py-1 rounded font-semibold text-xs border border-white text-white bg-transparent hover:bg-white/10 transition ${lang === t.hero.cta.slice(-2).toLowerCase() || lang === language ? 'bg-white/10 border-2' : ''}`}
-                  onClick={() => { setIsMobileMenuOpen(false); setLanguage(lang as any); }}
+                  className={`px-3 py-1 rounded font-semibold text-xs border border-white text-white bg-transparent hover:bg-white/10 transition ${
+                    lang === t.hero.cta.slice(-2).toLowerCase() ||
+                    lang === language
+                      ? "bg-white/10 border-2"
+                      : ""
+                  }`}
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    setLanguage(lang as any);
+                  }}
                 >
                   {lang.toUpperCase()}
                 </button>
