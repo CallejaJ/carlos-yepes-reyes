@@ -24,9 +24,62 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function BlogPage() {
+interface BlogPageProps {
+  searchParams: Promise<{ tag?: string }>;
+}
+
+export default async function BlogPage({ searchParams }: BlogPageProps) {
   const posts = await getAllPosts();
   const tags = await getAllTags();
+
+  // Obtener el tag activo desde searchParams
+  const params = await searchParams;
+  const activeTag = params.tag || "";
+
+  // Filtrar posts por tag activo (case-insensitive)
+  const filteredPosts = activeTag
+    ? posts.filter((post) =>
+        post.tags.some((tag) => tag.toLowerCase() === activeTag.toLowerCase())
+      )
+    : posts;
+
+  // Asignar imágenes aleatorias únicas a cada post
+  const sliderImages = [
+    "/images/slider/slider (1).jpg",
+    "/images/slider/slider (2).jpg",
+    "/images/slider/slider (3).jpg",
+    "/images/slider/slider (4).jpg",
+    "/images/slider/slider (5).jpeg",
+    "/images/slider/slider (6).jpg",
+    "/images/slider/slider (7).jpg",
+    "/images/slider/slider (8).jpeg",
+    "/images/slider/slider (9).jpg",
+    "/images/slider/slider (10).jpeg",
+    "/images/slider/slider (11).jpeg",
+    "/images/slider/slider (12).jpeg",
+    "/images/slider/slider (13).jpeg",
+    "/images/slider/slider (14).jpeg",
+    "/images/slider/slider (15).jpeg",
+    "/images/slider/slider (16).jpeg",
+    "/images/slider/slider (17).jpeg",
+    "/images/slider/slider (18).jpeg",
+  ];
+
+  // Mezclar imágenes y asignar una única por post
+  function shuffle<T>(array: T[]): T[] {
+    let currentIndex: number = array.length;
+    let randomIndex: number;
+    while (currentIndex !== 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex],
+        array[currentIndex],
+      ];
+    }
+    return array;
+  }
+  const shuffledImages = shuffle([...sliderImages]);
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -48,15 +101,25 @@ export default async function BlogPage() {
             <div className="mt-8 flex flex-wrap gap-2 justify-center">
               <Link
                 href="/blog"
-                className="px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors"
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors border ${
+                  activeTag === ""
+                    ? "bg-primary text-primary-foreground border-primary shadow"
+                    : "bg-card border-border text-foreground hover:bg-primary/10 hover:border-primary"
+                }`}
+                style={{ minWidth: 90, textAlign: "center" }}
               >
                 Todos
               </Link>
               {tags.map((tag) => (
                 <Link
                   key={tag}
-                  href={`/blog?tag=${tag.toLowerCase()}`}
-                  className="px-4 py-2 rounded-full bg-card border border-border text-sm font-medium hover:bg-primary/10 transition-colors"
+                  href={`/blog?tag=${encodeURIComponent(tag.toLowerCase())}`}
+                  className={`px-4 py-2 rounded-full text-sm font-medium border transition-colors ${
+                    activeTag.toLowerCase() === tag.toLowerCase()
+                      ? "bg-primary text-primary-foreground border-primary shadow"
+                      : "bg-card border-border text-foreground hover:bg-primary/10 hover:border-primary"
+                  }`}
+                  style={{ minWidth: 90, textAlign: "center" }}
                 >
                   {tag}
                 </Link>
@@ -69,51 +132,46 @@ export default async function BlogPage() {
       {/* Posts Grid */}
       <main className="flex-1 px-6 md:px-12 lg:px-16 xl:px-20 py-12">
         <div className="container mx-auto max-w-7xl">
-          {posts.length === 0 ? (
+          {filteredPosts.length === 0 ? (
             <div className="text-center py-20">
-              <h2 className="text-2xl font-bold mb-4">Aún no hay artículos</h2>
-              <p className="text-muted-foreground">
-                Vuelve pronto para leer nuestro contenido
+              <h2 className="text-2xl font-bold mb-4">
+                {activeTag
+                  ? `No hay artículos con el tag "${activeTag}"`
+                  : "Aún no hay artículos"}
+              </h2>
+              <p className="text-muted-foreground mb-6">
+                {activeTag
+                  ? "Intenta con otro tag o"
+                  : "Vuelve pronto para leer nuestro contenido"}
               </p>
+              {activeTag && (
+                <Link
+                  href="/blog"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+                >
+                  Ver todos los artículos
+                </Link>
+              )}
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {posts.map((post) => (
+              {filteredPosts.map((post, idx) => (
                 <article
                   key={post.slug}
                   className="group bg-card border border-border rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300"
                 >
                   <Link href={`/blog/${post.slug}`}>
-                    {/* Imagen aleatoria solo en el header visual */}
+                    {/* Imagen aleatoria única por post */}
                     <div className="w-full h-32 md:h-40 bg-muted flex items-center justify-center overflow-hidden">
                       <Image
-                        src={(() => {
-                          const sliderImages = [
-                            "/images/slider/slider (1).jpg",
-                            "/images/slider/slider (2).jpg",
-                            "/images/slider/slider (3).jpg",
-                            "/images/slider/slider (4).jpg",
-                            "/images/slider/slider (5).jpeg",
-                            "/images/slider/slider (6).jpg",
-                            "/images/slider/slider (7).jpg",
-                            "/images/slider/slider (8).jpeg",
-                            "/images/slider/slider (9).jpg",
-                            "/images/slider/slider (10).jpeg",
-                            "/images/slider/slider (11).jpeg",
-                            "/images/slider/slider (12).jpeg",
-                            "/images/slider/slider (13).jpeg",
-                            "/images/slider/slider (14).jpeg",
-                            "/images/slider/slider (15).jpeg",
-                            "/images/slider/slider (16).jpeg",
-                            "/images/slider/slider (17).jpeg",
-                            "/images/slider/slider (18).jpeg",
-                          ];
-                          return post.image || sliderImages[Math.floor(Math.random() * sliderImages.length)];
-                        })()}
+                        src={
+                          post.image ||
+                          shuffledImages[idx % shuffledImages.length]
+                        }
                         alt={post.title}
                         width={400}
                         height={160}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
 
@@ -122,7 +180,7 @@ export default async function BlogPage() {
                       {/* Tags */}
                       {post.tags.length > 0 && (
                         <div className="flex flex-wrap gap-2 mb-3">
-                          {post.tags.slice(0, 2).map((tag) => (
+                          {post.tags.slice(0, 3).map((tag: string) => (
                             <span
                               key={tag}
                               className="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-primary/10 text-primary text-xs font-medium"
