@@ -61,7 +61,6 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
     "/images/slider/optimized/slider(14).webp",
     "/images/slider/optimized/slider(15).webp",
     "/images/slider/optimized/slider(16).webp",
-    "/images/slider/optimized/slider(17).webp",
   ];
 
   // Mezclar imágenes y asignar una única por post

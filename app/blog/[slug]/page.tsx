@@ -74,7 +74,6 @@ export default async function BlogPostPage({ params }: PageProps) {
     { id: 14, path: "/images/slider/optimized/slider(14).webp" },
     { id: 15, path: "/images/slider/optimized/slider(15).webp" },
     { id: 16, path: "/images/slider/optimized/slider(16).webp" },
-    { id: 17, path: "/images/slider/optimized/slider(17).webp" },
   ];
 
   // Función para convertir slug a imagen de forma determinística
