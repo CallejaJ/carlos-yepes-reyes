@@ -6,6 +6,7 @@ type Language = "en" | "de" | "fr" | "es";
 
 interface Translations {
   hero: {
+    metaTitle: string;
     title: string;
     subtitle: string;
     cta: string;
@@ -95,6 +96,7 @@ interface Translations {
 const translations: Record<Language, Translations> = {
   en: {
     hero: {
+      metaTitle: "Bachata Outdoors in Malaga",
       title: "",
       subtitle:
         "Learn Salsa & Bachata with passion! Small groups (5-20 people) for personalized attention",
@@ -243,6 +245,7 @@ const translations: Record<Language, Translations> = {
   },
   de: {
     hero: {
+      metaTitle: "Bachata im Freien in Málaga",
       title: "",
       subtitle:
         "Lerne Salsa & Bachata mit Leidenschaft! Kleine Gruppen (5-20 Personen) für persönliche Betreuung",
@@ -393,6 +396,7 @@ const translations: Record<Language, Translations> = {
   },
   fr: {
     hero: {
+      metaTitle: "Bachata en Plein Air à Málaga",
       title: "",
       subtitle:
         "Apprends la Salsa & Bachata avec passion ! Petits groupes (5-20 personnes) pour une attention personnalisée",
@@ -543,6 +547,7 @@ const translations: Record<Language, Translations> = {
   },
   es: {
     hero: {
+      metaTitle: "Bachata al Aire Libre en Málaga",
       title: "",
       subtitle:
         "¡Aprende Salsa y Bachata con pasión! Grupos reducidos (5-20 personas) para atención personalizada",

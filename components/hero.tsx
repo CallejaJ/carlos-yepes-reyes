@@ -27,14 +27,12 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
-        <h1 className="mb-6 text-balance font-bold text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] text-4xl md:text-6xl lg:text-7xl">
-          {t.hero.title}
+        <h1 className="mb-4 text-balance font-extrabold text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] text-3xl md:text-5xl lg:text-6xl">
+          {t.hero.metaTitle}
         </h1>
-
         <p className="mb-10 max-w-2xl text-balance text-xl text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)] md:text-2xl">
           {t.hero.subtitle}
         </p>
-
         {/* CTA Button - Only visible on mobile */}
         <Button
           size="lg"
