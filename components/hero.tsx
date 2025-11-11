@@ -2,6 +2,7 @@
 
 import { useLanguage } from "./language-provider";
 import { Button } from "./ui/button";
+import Image from "next/image";
 
 export function Hero() {
   const { t } = useLanguage();
@@ -17,10 +18,13 @@ export function Hero() {
     <section className="relative h-screen w-full overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img
+        <Image
           src="/hero.jpg"
           alt="Salsa dancing"
-          className="h-full w-full object-cover"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-blue-900/50 via-blue-800/40 to-blue-950/70" />
       </div>
