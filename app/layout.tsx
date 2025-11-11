@@ -6,10 +6,14 @@ import WhatsAppWidget from "@/components/whatsapp-widget";
 import { LanguageProvider } from "@/components/language-provider";
 import "../styles/globals.css";
 
+// 🚀 OPTIMIZACIÓN: Solo cargar los pesos necesarios
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["400", "600", "700"], // ← Reducido de 6 a 3 pesos
   variable: "--font-sans",
+  display: "swap", // ← Mejora FOUT (Flash of Unstyled Text)
+  preload: true,
+  fallback: ["system-ui", "arial"], // ← Fallback mientras carga
 });
 
 export const metadata: Metadata = {
@@ -46,7 +50,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/hero.jpg",
+        url: "/hero.webp", // ← Usar WebP
         width: 1200,
         height: 630,
         alt: "Clases de bachata y salsa al aire libre en Málaga con Carlos Yépez",
@@ -59,7 +63,7 @@ export const metadata: Metadata = {
       "Bachata al Aire Libre | Clases de Salsa y Bachata en Málaga con Carlos Yépez",
     description:
       "Clases de salsa y bachata al aire libre en Málaga con Carlos Yépez. Grupos reducidos y ambiente divertido.",
-    images: ["/hero.jpg"],
+    images: ["/hero.webp"], // ← Usar WebP
     creator: "@bachataalairelibre",
   },
   robots: {
@@ -74,7 +78,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "google-site-verification-code", // Reemplazar con código real
+    google: "google-site-verification-code",
   },
 };
 
@@ -96,13 +100,13 @@ export default function RootLayout({
     address: {
       "@type": "PostalAddress",
       addressLocality: "Málaga",
-      addressRegion: "Cataluña",
+      addressRegion: "Andalucía",
       addressCountry: "ES",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: "41.3851",
-      longitude: "2.1734",
+      latitude: "36.7207",
+      longitude: "-4.4200",
     },
     areaServed: {
       "@type": "City",
@@ -144,15 +148,29 @@ export default function RootLayout({
   return (
     <html lang="es" className="overflow-x-hidden">
       <head>
+        {/* Preconnect para fonts */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+
+        {/* JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <meta name="geo.region" content="ES-CT" />
+
+        {/* Geo tags */}
+        <meta name="geo.region" content="ES-AN" />
         <meta name="geo.placename" content="Málaga" />
-        <meta name="geo.position" content="41.3851;2.1734" />
-        <meta name="ICBM" content="41.3851, 2.1734" />
+        <meta name="geo.position" content="36.7207;-4.4200" />
+        <meta name="ICBM" content="36.7207, -4.4200" />
+
+        {/* Metricool - defer para no bloquear */}
         <script
+          defer
           dangerouslySetInnerHTML={{
             __html: `function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"dcf4983526bc78ffa819bc82abe6eafa"})});`,
           }}

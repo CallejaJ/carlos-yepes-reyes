@@ -9,7 +9,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Blog - Bachata al Aire Libre | Consejos, Tutoriales y Eventos",
   description:
-    "Aprende bachata con nuestros artículos: técnicas, beneficios para la salud, los mejores lugares en Málaga y más. Todo sobre bachata y salsa.",
+    "Clases de salsa y bachata al aire libre en Málaga con Carlos Yépez. Grupos reducidos (5-20 personas) para atención personalizada. ¡Aprende a bailar con pasión!",
   keywords: [
     "blog bachata",
     "tutoriales bachata",
@@ -164,13 +164,14 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
                       <Image
                         src={
                           post.image ||
-                          `/images/slider/optimized/desktop-slider(${
+                          `/images/slider/optimized/slider(${
                             (idx % 16) + 1
                           }).webp`
                         }
                         alt={post.title}
                         width={400}
                         height={160}
+                        quality={80}
                         sizes="(max-width: 768px) 100vw, 33vw"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
