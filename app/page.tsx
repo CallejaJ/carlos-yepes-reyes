@@ -22,7 +22,7 @@ export default function Home() {
       <Pricing />
       <Testimonials />
       <FAQ />
-  <GMapsWrapper height={450} />
+      <GMapsWrapper height={450} />
       <Footer />
     </main>
   );
