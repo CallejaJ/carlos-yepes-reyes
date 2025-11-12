@@ -17,8 +17,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title:
-    "Bachata al Aire Libre en Málaga | Clases de Salsa y Bachata con Carlos Yépez",
+  title: "Bachata al Aire Libre en Málaga | Salsa y Bachata con Carlos Yépez",
   description:
     "Clases de salsa y bachata al aire libre en Málaga con Carlos Yépez. Grupos reducidos, ambiente divertido y atención personalizada.",
   keywords:
