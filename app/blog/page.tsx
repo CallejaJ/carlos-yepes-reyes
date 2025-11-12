@@ -43,41 +43,8 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
       )
     : posts;
 
-  // Asignar imágenes aleatorias únicas a cada post
-  const sliderImages = [
-    "/images/slider/optimized/slider(1).webp",
-    "/images/slider/optimized/slider(2).webp",
-    "/images/slider/optimized/slider(3).webp",
-    "/images/slider/optimized/slider(4).webp",
-    "/images/slider/optimized/slider(5).webp",
-    "/images/slider/optimized/slider(6).webp",
-    "/images/slider/optimized/slider(7).webp",
-    "/images/slider/optimized/slider(8).webp",
-    "/images/slider/optimized/slider(9).webp",
-    "/images/slider/optimized/slider(10).webp",
-    "/images/slider/optimized/slider(11).webp",
-    "/images/slider/optimized/slider(12).webp",
-    "/images/slider/optimized/slider(13).webp",
-    "/images/slider/optimized/slider(14).webp",
-    "/images/slider/optimized/slider(15).webp",
-    "/images/slider/optimized/slider(16).webp",
-  ];
-
-  // Mezclar imágenes y asignar una única por post
-  function shuffle<T>(array: T[]): T[] {
-    let currentIndex: number = array.length;
-    let randomIndex: number;
-    while (currentIndex !== 0) {
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-      [array[currentIndex], array[randomIndex]] = [
-        array[randomIndex],
-        array[currentIndex],
-      ];
-    }
-    return array;
-  }
-  const shuffledImages = shuffle([...sliderImages]);
+  // Always use the main logo as the featured image for posts
+  const featuredImage = "/logo/logo-trans.png";
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -153,27 +120,20 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.map((post, idx) => (
+              {filteredPosts.map((post) => (
                 <article
                   key={post.slug}
                   className="group bg-card border border-border rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300"
                 >
                   <Link href={`/blog/${post.slug}`}>
-                    {/* Imagen aleatoria única por post */}
-                    <div className="w-full h-32 md:h-40 bg-muted flex items-center justify-center overflow-hidden">
+                    {/* Logo con filtro azul */}
+                    <div className="relative w-full h-32 md:h-40 bg-muted flex items-center justify-center overflow-hidden">
                       <Image
-                        src={
-                          post.image ||
-                          `/images/slider/optimized/slider(${
-                            (idx % 16) + 1
-                          }).webp`
-                        }
+                        src={post.image || featuredImage}
                         alt={post.title}
-                        width={400}
-                        height={160}
-                        quality={80}
+                        fill
+                        className="object-contain filter-blue group-hover:scale-105 transition-transform duration-300"
                         sizes="(max-width: 768px) 100vw, 33vw"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
 

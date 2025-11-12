@@ -1,5 +1,11 @@
 @import "tailwindcss";
+
 @import "tw-animate-css";
+
+.filter-blue {
+  filter: brightness(0) saturate(100%) invert(18%) sepia(98%) saturate(747%)
+    hue-rotate(180deg) brightness(90%) contrast(90%);
+}
 
 @custom-variant dark (&:is(.dark *));
 
@@ -183,4 +189,9 @@
     margin-top: 1.75em;
     margin-bottom: 0.75em;
   }
+}
+
+.filter-blue {
+  filter: brightness(0) saturate(100%) invert(18%) sepia(98%) saturate(747%)
+    hue-rotate(180deg) brightness(90%) contrast(90%);
 }

@@ -56,38 +56,8 @@ export default async function BlogPostPage({ params }: PageProps) {
     notFound();
   }
 
-  // Lista de imágenes con IDs únicos (17 imágenes)
-  const sliderImages = [
-    { id: 1, path: "/images/slider/optimized/slider(1).webp" },
-    { id: 2, path: "/images/slider/optimized/slider(2).webp" },
-    { id: 3, path: "/images/slider/optimized/slider(3).webp" },
-    { id: 4, path: "/images/slider/optimized/slider(4).webp" },
-    { id: 5, path: "/images/slider/optimized/slider(5).webp" },
-    { id: 6, path: "/images/slider/optimized/slider(6).webp" },
-    { id: 7, path: "/images/slider/optimized/slider(7).webp" },
-    { id: 8, path: "/images/slider/optimized/slider(8).webp" },
-    { id: 9, path: "/images/slider/optimized/slider(9).webp" },
-    { id: 10, path: "/images/slider/optimized/slider(10).webp" },
-    { id: 11, path: "/images/slider/optimized/slider(11).webp" },
-    { id: 12, path: "/images/slider/optimized/slider(12).webp" },
-    { id: 13, path: "/images/slider/optimized/slider(13).webp" },
-    { id: 14, path: "/images/slider/optimized/slider(14).webp" },
-    { id: 15, path: "/images/slider/optimized/slider(15).webp" },
-    { id: 16, path: "/images/slider/optimized/slider(16).webp" },
-  ];
-
-  // Función para convertir slug a imagen de forma determinística
-  // DEBE COINCIDIR con la función en blog/page.tsx
-  function slugToImageId(slug: string): number {
-    let sum = 0;
-    for (let i = 0; i < slug.length; i++) {
-      sum += slug.charCodeAt(i);
-    }
-    return sum % sliderImages.length;
-  }
-
-  // Asignar imagen basada en el slug del post (consistente con la lista)
-  const featuredImage = post.image || sliderImages[slugToImageId(slug)].path;
+  // Always use the main logo as the featured image for posts
+  const featuredImage = "/logo/logo-trans.png";
 
   const relatedPosts = await getRelatedPosts(slug);
 
@@ -146,13 +116,13 @@ export default async function BlogPostPage({ params }: PageProps) {
 
           {/* Featured Image */}
           <div className="relative aspect-video rounded-xl overflow-hidden mb-12 bg-muted">
-            <Image
-              src={featuredImage}
-              alt={post.title}
-              fill
-              className="object-cover"
-              priority
-            />
+              <Image
+                src={featuredImage}
+                alt={post.title}
+                fill
+                className="object-contain filter-blue"
+                priority
+              />
           </div>
 
           {/* Share Button */}
@@ -221,8 +191,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               {relatedPosts.map((relatedPost) => {
                 // Usar la misma función para asignar imagen a posts relacionados
                 const relatedPostImage =
-                  relatedPost.image ||
-                  sliderImages[slugToImageId(relatedPost.slug)].path;
+                  relatedPost.image || "/logo/logo-trans.png";
 
                 return (
                   <Link
@@ -231,12 +200,12 @@ export default async function BlogPostPage({ params }: PageProps) {
                     className="group bg-card border border-border rounded-xl overflow-hidden hover:shadow-lg transition-all"
                   >
                     <div className="relative aspect-video overflow-hidden bg-muted">
-                      <Image
-                        src={relatedPostImage}
-                        alt={relatedPost.title}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
+                        <Image
+                          src={relatedPostImage}
+                          alt={relatedPost.title}
+                          fill
+                          className="object-contain filter-blue group-hover:scale-105 transition-transform duration-300"
+                        />
                     </div>
                     <div className="p-4">
                       <h3 className="font-bold mb-2 group-hover:text-primary transition-colors line-clamp-2">
