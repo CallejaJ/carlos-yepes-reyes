@@ -1,8 +1,8 @@
 "use client";
 
-import { useLanguage } from "./language-provider";
+import { useLanguage } from "./LanguageProvider";
 import { Button } from "./ui/button";
-import { LanguageSelector } from "./language-selector";
+import { LanguageSelector } from "./LanguageSelector";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";

@@ -2,8 +2,8 @@ import type React from "react";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
-import WhatsAppWidget from "@/components/whatsapp-widget";
-import { LanguageProvider } from "@/components/language-provider";
+import WhatsAppWidget from "@/components/WhatsappWidget";
+import { LanguageProvider } from "@/components/LanguageProvider";
 import "../styles/globals.css";
 
 // 🚀 OPTIMIZACIÓN: Solo cargar los pesos necesarios

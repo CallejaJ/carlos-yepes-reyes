@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
 
 // Lazy load GMaps solo cuando sea visible
-const GMaps = dynamic(() => import("@/components/gmaps"), {
+const GMaps = dynamic(() => import("@/components/Ggmaps"), {
   ssr: false,
   loading: () => (
     <div className="w-full h-[450px] bg-muted animate-pulse flex items-center justify-center">

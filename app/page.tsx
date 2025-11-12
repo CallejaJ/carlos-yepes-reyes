@@ -1,14 +1,14 @@
-import { Header } from "@/components/header";
-import { Hero } from "@/components/hero";
-import { PhotoSlider } from "@/components/photo-slider";
-import { HowItWorks } from "@/components/how-it-works";
-import { Benefits } from "@/components/benefits";
-import { Pricing } from "@/components/pricing";
-import { Testimonials } from "@/components/testimonials";
-import { FAQ } from "@/components/faq";
-import { Footer } from "@/components/footer";
-import { MusicPlayer } from "@/components/music-player";
-import GMapsWrapper from "@/components/gmaps-wrapper";
+import { Header } from "@/components/Header";
+import { Hero } from "@/components/Hero";
+import { HowItWorks } from "@/components/HowItWorks";
+import { Benefits } from "@/components/Benefits";
+import { Pricing } from "@/components/Pricing";
+import { Testimonials } from "@/components/Testimonials";
+import GMapsWrapper from "@/components/GMapsWrapper";
+import { FAQ } from "@/components/Faq";
+import { Footer } from "@/components/Footer";
+import { MusicPlayer } from "@/components/MusicPlayer";
+import { Tableau } from "@/components/Tableau";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
       <Header />
       <MusicPlayer />
       <Hero />
-      <PhotoSlider />
+      <Tableau />
       <HowItWorks />
       <Benefits />
       <Pricing />

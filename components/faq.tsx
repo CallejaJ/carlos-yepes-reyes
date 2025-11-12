@@ -1,6 +1,6 @@
 "use client";
 
-import { useLanguage } from "./language-provider";
+import { useLanguage } from "./LanguageProvider";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 

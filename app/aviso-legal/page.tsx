@@ -1,8 +1,8 @@
 "use client";
 
 import type React from "react";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { useLanguage } from "@/components/language-provider";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useCallback, useMemo } from "react";

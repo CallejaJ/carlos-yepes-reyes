@@ -1,5 +1,5 @@
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { getAllPosts, getAllTags } from "@/lib/blog";
 import Link from "next/link";
 import Image from "next/image";

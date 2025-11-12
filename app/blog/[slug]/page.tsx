@@ -1,6 +1,6 @@
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
-import { ShareButton } from "@/components/share-button";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { ShareButton } from "@/components/ShareButton";
 import { getPostBySlug, getAllPosts, getRelatedPosts } from "@/lib/blog";
 import { notFound } from "next/navigation";
 import Image from "next/image";

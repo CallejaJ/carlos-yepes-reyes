@@ -1,6 +1,6 @@
 "use client"
 
-import { useLanguage } from "./language-provider"
+import { useLanguage } from "./LanguageProvider"
 import { Card } from "./ui/card"
 import { BookOpen, Music2, Sparkles } from "lucide-react"
 

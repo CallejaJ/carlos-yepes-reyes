@@ -1,6 +1,6 @@
 "use client";
 
-import { useLanguage } from "./language-provider";
+import { useLanguage } from "./LanguageProvider";
 import { Button } from "./ui/button";
 import Image from "next/image";
 
