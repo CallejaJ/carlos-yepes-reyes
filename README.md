@@ -261,7 +261,7 @@ git push origin main
 - 📱 WhatsApp: [+34 698 50 16 76](https://wa.me/34698501676)
 - 📸 Instagram: [@bachataalairelibre](https://instagram.com/bachataalairelibre)
 - 👥 Meetup: [Baila Salsa y Bachata](https://www.meetup.com/es-ES/baila-salsa-y-bachata/)
-- 📧 Email: bachataalairelibre@gmail.com
+- 📧 Email: bachataalairelibremalaga@gmail.com
 - 🌐 Website: [bachataalairelibre.com](https://www.bachataalairelibre.com/)
 
 ## 📄 License

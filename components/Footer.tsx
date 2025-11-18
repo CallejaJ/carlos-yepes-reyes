@@ -46,7 +46,7 @@ export function Footer() {
                 >
                   bachataalairelibre
                   <wbr />
-                  libre@gmail.com
+                  malaga@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-2">
