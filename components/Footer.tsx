@@ -41,7 +41,7 @@ export function Footer() {
               <div className="flex items-start gap-2">
                 <Mail className="h-4 w-4 flex-shrink-0 opacity-70 mt-0.5" />
                 <a
-                  href="mailto:bachataalairelibrelibre@gmail.com"
+                  href="mailto:bachataalairelibremalaga@gmail.com"
                   className="text-sm hover:underline opacity-80 hover:opacity-100 break-all"
                 >
                   bachataalairelibre
